@@ -3,72 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conexão Segura | Cidadania Digital e IA</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Portal Conexão Segura</title>
+    <!-- Vinculação correta do arquivo CSS na mesma pasta -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <div class="header-container">
-            <h1>Portal Conexão Segura</h1>
-            <p>Sua dose diária de verdade na era da Inteligência Artificial</p>
-            <button id="toggle-dark-mode" aria-label="Alternar modo escuro">🌓 Alternar Modo</button>
-        </div>
+        <h1>Portal Conexão Segura</h1>
+        <p>Sua dose diária de verdade na era da Inteligência Artificial</p>
+        <button id="btn-theme" onclick="toggleTheme()">Alternar Modo</button>
     </header>
 
     <main>
-        <!-- SEÇÃO 1: NOTÍCIAS PRINCIPAIS -->
         <section class="news-section">
             <h2>Notícias em Destaque</h2>
-            <div class="news-grid">
-                <article class="news-card">
-                    <span class="tag-alert">Alerta</span>
-                    <h3>O que são Deepfakes e como elas ameaçam a sociedade?</h3>
-                    <p>Vídeos e áudios manipulados por Inteligência Artificial estão cada vez mais realistas. Aprenda a não ser enganado por simulações perfeitas.</p>
-                </article>
-                <article class="news-card">
-                    <span class="tag-guide">Guia Prático</span>
-                    <h3>3 passos infalíveis para detectar imagens geradas por IA</h3>
-                    <p>Fique atento aos detalhes: reflexos nos olhos, dentes excessivamente perfeitos e fundos distorcidos revelam a mentira digital.</p>
-                </article>
-            </div>
+            <span class="badge alert">Alerta</span>
+            <h3>O que são Deepfakes e como elas ameaçam a sociedade?</h3>
+            <p>Vídeos e áudios manipulados por Inteligência Artificial estão cada vez mais realistas. Aprenda a não ser enganado por simulações perfeitas.</p>
+            
+            <span class="badge guide">Guia Prático</span>
+            <h3>3 passos infalíveis para detectar imagens geradas por IA</h3>
+            <p>Fique atento aos detalhes: reflexos nos olhos, dentes excessivamente perfeitos e fundos distorcidos revelam a mentira digital.</p>
         </section>
 
-        <!-- SEÇÃO 2: VALIDADOR DE VERACIDADE (INTERATIVIDADE) -->
         <section class="checker-section">
             <h2>Aba de Verificação de Veracidade</h2>
             <p>Recebeu uma notícia bombástica no WhatsApp? Cole o link ou o título abaixo para checar a confiabilidade da fonte.</p>
-            <form id="fact-checker-form" onsubmit="return false;">
+            
+            <div class="form-group">
                 <label for="news-input">Texto da Notícia ou URL:</label>
-                <input type="text" id="news-input" placeholder="Ex: Cientistas clonam dinossauro com IA..." required>
-                <button type="submit" id="btn-check">Analisar Confiabilidade</button>
-            </form>
-            <div id="checker-result" class="hidden"></div>
+                <input type="text" id="news-input" placeholder="Ex: Cientistas clonam dinossauros...">
+                <button onclick="checkVeracity()">Analisar Confiabilidade</button>
+            </div>
+            <div id="checker-result"></div>
         </section>
 
-        <!-- SEÇÃO 3: HORÓSCOPO DA IA -->
         <section class="horoscope-section">
             <h2>Horóscopo do Dia Digital</h2>
             <p>Descubra o que os algoritmos reservam para a sua segurança e cidadania digital hoje.</p>
-            <div class="horoscope-selector">
+            <div class="form-group">
                 <label for="sign-select">Escolha seu signo:</label>
                 <select id="sign-select">
                     <option value="">-- Selecione seu signo --</option>
-                    <option value="aries">Áries</option>
-                    <option value="touro">Touro</option>
-                    <option value="gemeos">Gêmeos</option>
-                    <option value="cancer">Câncer</option>
-                    <option value="leao">Leão</option>
-                    <option value="virgem">Virgem</option>
-                    <option value="libra">Libra</option>
-                    <option value="escorpiao">Escorpião</option>
-                    <option value="sagitario">Sagitário</option>
-                    <option value="capricornio">Capricórnio</option>
-                    <option value="aquario">Aquário</option>
-                    <option value="peixes">Peixes</option>
+                    <option value="aries">Áries Digital</option>
+                    <option value="touro">Touro Criptográfico</option>
+                    <option value="gemeos">Gêmeos Conectado</option>
+                    <option value="cancer">Câncer Protegido</option>
+                    <option value="leao">Leão Influenciador</option>
+                    <option value="virgem">Virgem Algorítmico</option>
+                    <option value="libra">Libra Moderado</option>
+                    <option value="escorpiao">Escorpião Firewall</option>
+                    <option value="sagitario">Sagitário Sem Fio</option>
+                    <option value="capricornio">Capricórnio Blockchain</option>
+                    <option value="aquario">Aquário Open Source</option>
+                    <option value="peixes">Peixes Phishing</option>
                 </select>
-                <button id="btn-horoscope">Ver Meu Destino</button>
+                <button onclick="showHoroscope()">Ver Meu Destino</button>
             </div>
-            <div id="horoscope-result" class="hidden"></div>
+            <div id="horoscope-result"></div>
         </section>
     </main>
 
@@ -77,6 +70,7 @@
         <p>Desenvolvido para fins educacionais.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Vinculação correta do arquivo JavaScript na mesma pasta -->
+    <script src="script.js"></script>
 </body>
 </html>
